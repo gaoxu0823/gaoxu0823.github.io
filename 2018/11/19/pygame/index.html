@@ -1,0 +1,367 @@
+
+<!DOCTYPE html>
+<html lang class="loading">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>PEP8代码风格指南 - jack&#39;blog</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate">
+    <meta name="keywords" content="Fechin,"> 
+    <meta name="description" content="###Pygame  
+Pygame有很多的模块，不同的模块专注于不同的功能：  
+
+
+
+模块名
+功能
+
+
+
+
+pygame.cdrom
+访问光驱
+
+
+pygame.cursors
+加载光标
+
+
+p,"> 
+    <meta name="author" content="Xu Gao"> 
+    <link rel="alternative" href="atom.xml" title="jack&#39;blog" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <link rel="stylesheet" href="/css/diaspora.css">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8691406134231910",
+              enable_page_level_ads: true
+         });
+    </script>
+    <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+</head>
+</html>
+<body class="loading">
+    <span id="config-title" style="display:none">jack&#39;blog</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="icon-home image-icon" href="javascript:;" data-url="http://yoursite.com"></a>
+    <div title="播放/暂停" class="icon-play"></div>
+    <h3 class="subtitle">PEP8代码风格指南</h3>
+    <div class="social">
+        <!--<div class="like-icon">-->
+            <!--<a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
+        <!--</div>-->
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class="main">
+        <h1 class="title">PEP8代码风格指南</h1>
+        <div class="stuff">
+            <span>十一月 19, 2018</span>
+            
+  <ul class="post-tags-list"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/PEP8/">PEP8</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/Python/">Python</a></li></ul>
+
+
+        </div>
+        <div class="content markdown">
+            <p>###Pygame  </p>
+<p>Pygame有很多的模块，不同的模块专注于不同的功能：  </p>
+<table>
+<thead>
+<tr>
+<th>模块名</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pygame.cdrom</td>
+<td>访问光驱</td>
+</tr>
+<tr>
+<td>pygame.cursors</td>
+<td>加载光标</td>
+</tr>
+<tr>
+<td>pygame.display</td>
+<td>访问显示设备</td>
+</tr>
+<tr>
+<td>pygame.draw</td>
+<td>绘制形状、线和点</td>
+</tr>
+<tr>
+<td>pygame.event</td>
+<td>管理事件</td>
+</tr>
+<tr>
+<td>pygame.font</td>
+<td>使用字体</td>
+</tr>
+<tr>
+<td>pygame.image</td>
+<td>加载和存储图片</td>
+</tr>
+<tr>
+<td>pygame.joystick</td>
+<td>使用游戏手柄或者 类似的东西</td>
+</tr>
+<tr>
+<td>pygame.key</td>
+<td>读取键盘按键</td>
+</tr>
+<tr>
+<td>pygame.mixer</td>
+<td>声音</td>
+</tr>
+<tr>
+<td>pygame.mouse</td>
+<td>鼠标</td>
+</tr>
+<tr>
+<td>pygame.movie</td>
+<td>播放视频</td>
+</tr>
+<tr>
+<td>pygame.music</td>
+<td>播放音频</td>
+</tr>
+<tr>
+<td>pygame.overlay</td>
+<td>访问高级视频叠加</td>
+</tr>
+<tr>
+<td>pygame.rect</td>
+<td>管理矩形区域</td>
+</tr>
+<tr>
+<td>pygame.sndarray</td>
+<td>操作声音数据</td>
+</tr>
+<tr>
+<td>pygame.sprite</td>
+<td>操作移动图像</td>
+</tr>
+<tr>
+<td>pygame.surface</td>
+<td>管理图像和屏幕</td>
+</tr>
+<tr>
+<td>pygame.surfarray</td>
+<td>管理点阵图像数据</td>
+</tr>
+<tr>
+<td>pygame.time</td>
+<td>管理时间和帧信息</td>
+</tr>
+<tr>
+<td>pygame.transform</td>
+<td>缩放和移动图像</td>
+</tr>
+</tbody>
+</table>
+<p>####disolay模块<br>下面主要介绍一下display模块的一些常用方法：     </p>
+<p>#####1.set_model 生成windows窗口</p>
+<pre><code>pygame.display.set_model(resolution, flags, depth)  
+</code></pre><p>resolution：可以控制生成的window的大小。传的值：(100,200)这样的<br>flags：控制你想要怎样的显示屏，可以赋一下几个全局常量。（这些常量在pygame.locals模块中）    </p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FULLSCREEN</td>
+<td>控制全屏,0或者1来控制</td>
+</tr>
+<tr>
+<td>HWSURFACE</td>
+<td>控制是否进行硬件加速</td>
+</tr>
+<tr>
+<td>RESIZABLE</td>
+<td>控制窗口是否可以调节大小</td>
+</tr>
+<tr>
+<td>NOFRAME</td>
+<td>创建一个没有边框的窗口</td>
+</tr>
+</tbody>
+</table>
+<p>depth：不推荐设置    </p>
+<p>#####2.get_caption()获得窗口的标题  </p>
+<pre><code>pygame.display.get_caption()  
+</code></pre><p>#####3.set_caption(title)设置窗口的标题  </p>
+<pre><code>pygame.display.set_caption(title)  
+</code></pre><p>​    </p>
+<p>####事件  </p>
+<table>
+<thead>
+<tr>
+<th>事件</th>
+<th>产生途径</th>
+<th>参数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>QUIT</td>
+<td>用户按下关闭按钮</td>
+<td>none</td>
+</tr>
+<tr>
+<td>ATIVEEVENT</td>
+<td>Pygame被激活或者隐藏</td>
+<td>gain, state</td>
+</tr>
+<tr>
+<td>KEYDOWN</td>
+<td>键盘被按下</td>
+<td>unicode, key, mod</td>
+</tr>
+<tr>
+<td>KEYUP</td>
+<td>键盘被放开</td>
+<td>key, mod</td>
+</tr>
+<tr>
+<td>MOUSEMOTION</td>
+<td>鼠标移动</td>
+<td>pos, rel, buttons</td>
+</tr>
+<tr>
+<td>MOUSEBUTTONDOWN</td>
+<td>鼠标按下</td>
+<td>pos, button</td>
+</tr>
+<tr>
+<td>MOUSEBUTTONUP</td>
+<td>鼠标放开</td>
+<td>pos, button</td>
+</tr>
+<tr>
+<td>USEREVENT</td>
+<td>触发了一个用户事件</td>
+<td>code</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>title: PEP8代码风格指南<br>date: 2018-11-19 23:58:18<br>categories: 语言基础<br>tags:</p>
+<ul>
+<li>Python</li>
+<li>PEP8</li>
+</ul>
+<hr>
+<hr>
+<hr>
+<p>​    </p>
+<p>​    </p>
+<p>​        </p>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src>
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        <li title="0" data-url="http://link.hhtjim.com/163/5146554.mp3"></li>
+                    
+                        <li title="1" data-url="http://link.hhtjim.com/qq/001faIUs4M2zna.mp3"></li>
+                    
+                </ul>
+            
+        </div>
+        
+    <div id="gitalk-container" class="comment link" data-ae="false" data-ci data-cs data-r data-o data-a data-d="false">查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/diaspora.js"></script>
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+</html>
